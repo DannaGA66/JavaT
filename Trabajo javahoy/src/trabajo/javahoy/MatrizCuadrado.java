@@ -5,30 +5,28 @@ public class MatrizCuadrado
 {
     public static void main(String[] args)
     {
-        int myMatriz [][] = new int[5][5];
+         int matrizSq[][] = new int[4][4];
+        System.out.println("\n\nPunto V: ");
+        System.out.println("\nCuadrado: ");
         
-        System.out.println("******");
-        
-        int acumulador = 1;
-        
-        for(int i = 0; i < 5; i++)
-        {
-            for(int j = 0; j < 5; j++ )
-            {
-                myMatriz[j][i] = acumulador * 2;
-                myMatriz[i][j] = acumulador * 1; 
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
                 
+                if ((i == 0)||(j == 0) ||(j == 3)||(i == 3)){
+                    matrizSq[i][j] = 1;
+                }
+                else{
+                    matrizSq[i][j] = 0;
+                }     
             }
-            
         }
-        for(int i = 0; i < 5; i++)
-        {
-            for(int j = 0; j < 5; j++ )
-            {
-                System.out.print(" | "+ myMatriz[i][j] +" | ");
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
+                
+                System.out.print("| " + matrizSq[i][j] + " | ");
             }
-                System.out.println(" ");
-         }
+            System.out.println("");
+        }
     }
     
 }
